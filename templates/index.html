@@ -18,26 +18,24 @@
     <!-- page header -->
     <header id="home" class="header">
         <div class="None"></div>
-			<div class="header-content container">
+			<div class="header-content container text-center">
 			<h2><b>Spam Detector For Emails</b></h2>
 			</div>
 	
 	
-	<div class="ml-container">
+	<div class="contact-form col-md-10 col-lg-6 m-auto">
 
-	<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Your Message Here</p>
-		<textarea name="message" rows="6" cols="50"></textarea>
-		<br/>
+	<form action="{{ url_for('predict')}}"  method="POST">
 
-		<input type="submit" class="btn-info" value="predict">
-		<br/><br/>
+		<textarea name="message" rows="4" cols="30" placeholder="Write message" required="true"></textarea><br/>
+		<input type="submit" class="btn-info" value="predict"><br/><br/>
+		
 		<h3> How does it work?</h3>
 		<p1> The NLP model is trained with classic spam/ham dataset provided by UCI. Message with words like free bonus,credit card, send sms winner,etc are detected as spam.
 		Message length does matter too. Spam messages tend to be lengthier than hams most of the time.</p1>
 		
 		<p1>Check source code <a href="https://github.com/akashmasne/SpamClassifier"><u>here</u></a></p1>
-		
+	  
 	</form>
 		
 	</div>
@@ -48,20 +46,20 @@
         <footer class="footer">       
             <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
             <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="https://github.com/akashmasne" class="link"><i class="ti-github"></i></a>
             </div>
         </footer>
     </div> <!-- end of page footer -->
 	
 	<!-- core  -->
-    <script src="{{ url_for('static', filename="assets/vendors/jquery/jquery-3.4.1.js ") }}"></script>
+    <script src="{{ url_for('static', filename="assets/vendors/jquery/jquery-3.4.1.js") }}"></script>
 	
-	<script src="{{ url_for('static', filename="assets/vendors/bootstrap/bootstrap.bundle.js ") }}"> </script>
+	<script src="{{ url_for('static', filename="assets/vendors/bootstrap/bootstrap.bundle.js") }}"> </script>
 
-	<script src="{{ url_for('static', filename="assets/vendors/bootstrap/bootstrap.affix.js ") }}"> </script>
+	<script src="{{ url_for('static', filename="assets/vendors/bootstrap/bootstrap.affix.js") }}"> </script>
 
     <!-- Meyawo js -->
-    <script src="{{ url_for('static', filename="assets/js/meyawo.js ") }}"> </script>
+    <script src="{{ url_for('static', filename="assets/js/meyawo.js") }}"> </script>
 
 </body>
 </html>
