@@ -24,7 +24,8 @@
 			<h2><b>Spam Detector For Emails</b></h2>
 		</div>
 	
-	<div class="contact-form col-md-12 col-lg-6 m-auto"> 
+	<!-- <div class="contact-form col-md-12 col-lg-6 m-auto">  -->
+	<div class="md-form col-lg-6">
 	 <form action="{{ url_for('predict')}}"  method="POST">
 	 
 	 
@@ -36,7 +37,7 @@
 		</div>
 		</br>
 	
-	<input type="submit" class="btn btn-outline-primary rounded" value="predict"><br/><br/>
+		<input type="submit" class="btn btn-outline-primary rounded" value="predict"><br/><br/>
 		
 		<h3> How does it work?</h3>
 		<p1> The NLP model is trained with classic spam/ham dataset provided by UCI. Message with words like free bonus,credit card, send sms winner,etc are detected as spam.
